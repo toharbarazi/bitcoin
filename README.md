@@ -39,7 +39,7 @@ The application consists of two main containers:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/toharbarazi/bitcoin.git
 cd bitcoin-tracker
 
 # Start the application
