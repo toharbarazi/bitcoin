@@ -54,6 +54,8 @@ ansible-playbook ansible/install_docker.yml
 
 # Deploy the application
 ansible-playbook ansible/deploy.yml
+after, run this command to see the output:
+docker logs -f bitcoin-tracker
 ```
 
 ---
