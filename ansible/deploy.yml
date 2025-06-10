@@ -1,0 +1,23 @@
+---
+- name: Deploy Bitcoin Tracker on localhost
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Ensure Docker image is built
+      community.docker.docker_image:
+        name: bitcoin-tracker
+        build:
+          path: ../
+        source: build
+        tag: latest
+
+    - name: Run Bitcoin Tracker container
+      community.docker.docker_container:
+        name: bitcoin-tracker
+        image: bitcoin-tracker:latest
+        state: started
+        restart_policy: no
+        auto_remove: true
+        tty: yes
+        detach: false
