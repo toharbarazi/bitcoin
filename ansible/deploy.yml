@@ -8,7 +8,7 @@
       community.docker.docker_image:
         name: bitcoin-tracker
         build:
-          path: ../
+          path: ../main_task
         source: build
         tag: latest
 
@@ -17,7 +17,7 @@
         name: bitcoin-tracker
         image: bitcoin-tracker:latest
         state: started
-        restart_policy: no
-        auto_remove: true
-        tty: yes
-        detach: false
+        restart_policy: unless-stopped
+        volumes:
+          - "../bitcoin.db:/app/bitcoin.db"
+
