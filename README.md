@@ -91,29 +91,7 @@ The dashboard displays:
 
 ```
 [2025-06-10 10:30:00] Current: $67,500 | Avg: $65,200.45 | Min: $63,100 | Max: $69,800 | Recommendation: Hold
-```
 
----
-
-## 📁 Project Structure
-
-```
-bitcoin-tracker/
-├── app/                # Fetcher container (fetcher.py)
-│   ├── fetcher.py
-│   └── requirements.txt
-├── flask_api/          # API container (Flask app)
-│   ├── app.py
-│   └── requirements.txt
-├── ansible/            # Optional Ansible playbooks
-│   ├── install_docker.yml
-│   └── deploy.yml
-├── docker-compose.yml
-├── bitcoin.db
-└── README.md
-```
-
----
 
 ## 🐳 Container Details
 
